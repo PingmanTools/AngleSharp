@@ -305,6 +305,19 @@
 
         static Encoding GetEncoding(String name)
         {
+            if (PlatformExtensions.AvailableEncodings != null)
+            {
+                var encodings = PlatformExtensions.AvailableEncodings.Value;
+                foreach (var encoding in encodings)
+                {
+                    if (encoding.Item1.Equals(name, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return encoding.Item2;
+                    }
+                }
+                return Utf8;
+            }
+
             try
             {
                 return Encoding.GetEncoding(name);

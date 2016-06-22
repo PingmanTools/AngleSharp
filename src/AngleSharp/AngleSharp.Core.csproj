@@ -1064,6 +1064,7 @@
     <Compile Include="Parser\Xml\XmlTokenizer.cs" />
     <Compile Include="Parser\Xml\XmlTokenType.cs" />
     <Compile Include="Parser\Xml\XmlTreeMode.cs" />
+    <Compile Include="PlatformExtensions.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
